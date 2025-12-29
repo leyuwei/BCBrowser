@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Omnilink 区块链浏览器</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="background-glow"></div>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">◎</div>
+      <div>
+        <h1>Omnilink</h1>
+        <p>Omnilink 区块链浏览器 · 未来数据流</p>
+      </div>
+    </div>
+    <div class="network-status">
+      <span class="status-dot"></span>
+      <span>主网运行中</span>
+      <span class="latency" id="latency">12ms</span>
+    </div>
+  </header>
+
+  <main class="dashboard">
+    <section class="hero">
+      <div class="hero-card">
+        <h2>区块高度</h2>
+        <p class="metric" id="blockHeight">1,284,302</p>
+        <span class="trend">+6 / min</span>
+      </div>
+      <div class="hero-card">
+        <h2>实时 TPS</h2>
+        <p class="metric" id="tps">3,184</p>
+        <span class="trend">波动中</span>
+      </div>
+      <div class="hero-card">
+        <h2>活跃节点</h2>
+        <p class="metric" id="nodes">1,024</p>
+        <span class="trend">全球 43 区域</span>
+      </div>
+      <div class="hero-card">
+        <h2>燃料价格</h2>
+        <p class="metric" id="gasPrice">38.2</p>
+        <span class="trend">gwei</span>
+      </div>
+    </section>
+
+    <section class="content-grid">
+      <div class="panel blocks-panel">
+        <div class="panel-header">
+          <h3>新区块流</h3>
+          <span class="panel-subtitle">区块不断增长 · 纯前端模拟</span>
+        </div>
+        <div class="blocks-stream" id="blocksStream"></div>
+      </div>
+
+      <div class="panel side-panel">
+        <div class="panel-header">
+          <h3>链上统计</h3>
+          <span class="panel-subtitle">实时指标 + 波动图表</span>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h4>日交易量</h4>
+            <p id="dailyTx">142,093,201</p>
+          </div>
+          <div class="stat-card">
+            <h4>总锁仓</h4>
+            <p id="tvl">$93.4B</p>
+          </div>
+          <div class="stat-card">
+            <h4>平均确认</h4>
+            <p id="confirmTime">1.4s</p>
+          </div>
+          <div class="stat-card">
+            <h4>活跃合约</h4>
+            <p id="contracts">289,421</p>
+          </div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-header">
+            <h4>TPS 波动</h4>
+            <span id="tpsDelta">+2.3%</span>
+          </div>
+          <canvas id="tpsChart" width="360" height="140"></canvas>
+        </div>
+        <div class="chart-card">
+          <div class="chart-header">
+            <h4>燃料价格曲线</h4>
+            <span id="gasDelta">-1.1%</span>
+          </div>
+          <canvas id="gasChart" width="360" height="140"></canvas>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Omnilink Explorer © 2049 · 未来数据网络</span>
+    <span>数据源：前端模拟</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
