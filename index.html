@@ -31,7 +31,7 @@
         <span class="trend">+6 / min</span>
       </div>
       <div class="hero-card">
-        <h2>实时 TPS</h2>
+        <h2>实时流速</h2>
         <p class="metric" id="tps">3,184</p>
         <span class="trend">波动中</span>
       </div>
@@ -41,9 +41,9 @@
         <span class="trend">全球 43 区域</span>
       </div>
       <div class="hero-card">
-        <h2>燃料价格</h2>
+        <h2>资源指数</h2>
         <p class="metric" id="gasPrice">38.2</p>
-        <span class="trend">gwei</span>
+        <span class="trend">等级</span>
       </div>
     </section>
 
@@ -63,15 +63,15 @@
         </div>
         <div class="stats-grid">
           <div class="stat-card">
-            <h4>日交易量</h4>
+            <h4>日事物量</h4>
             <p id="dailyTx">142,093,201</p>
           </div>
           <div class="stat-card">
-            <h4>总锁仓</h4>
-            <p id="tvl">$93.4B</p>
+            <h4>协作池容量</h4>
+            <p id="tvl">93.4PB</p>
           </div>
           <div class="stat-card">
-            <h4>平均确认</h4>
+            <h4>平均同步</h4>
             <p id="confirmTime">1.4s</p>
           </div>
           <div class="stat-card">
@@ -81,17 +81,82 @@
         </div>
         <div class="chart-card">
           <div class="chart-header">
-            <h4>TPS 波动</h4>
+            <h4>流速波动</h4>
             <span id="tpsDelta">+2.3%</span>
           </div>
           <canvas id="tpsChart" width="360" height="140"></canvas>
         </div>
         <div class="chart-card">
           <div class="chart-header">
-            <h4>燃料价格曲线</h4>
+            <h4>资源指数曲线</h4>
             <span id="gasDelta">-1.1%</span>
           </div>
           <canvas id="gasChart" width="360" height="140"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel trust-panel">
+      <div class="panel-header">
+        <h3>安全可信功能模块</h3>
+        <span class="panel-subtitle">智能合约支持 · 运行正常</span>
+      </div>
+      <div class="trust-grid">
+        <div class="trust-card" data-module="auth">
+          <div class="trust-title">
+            <h4>分布式协同认证</h4>
+            <span class="status-pill" id="status-auth">运行正常</span>
+          </div>
+          <p class="trust-desc" id="desc-auth">合约群签名一致性校验中</p>
+          <div class="trust-meter">
+            <span id="meter-auth"></span>
+          </div>
+          <div class="trust-meta">
+            <span id="latency-auth">延迟 24ms</span>
+            <span id="load-auth">负载 62%</span>
+          </div>
+        </div>
+        <div class="trust-card" data-module="interaction">
+          <div class="trust-title">
+            <h4>数据可行交互</h4>
+            <span class="status-pill" id="status-interaction">运行正常</span>
+          </div>
+          <p class="trust-desc" id="desc-interaction">多域协同编排与路由畅通</p>
+          <div class="trust-meter">
+            <span id="meter-interaction"></span>
+          </div>
+          <div class="trust-meta">
+            <span id="latency-interaction">延迟 18ms</span>
+            <span id="load-interaction">负载 58%</span>
+          </div>
+        </div>
+        <div class="trust-card" data-module="privacy">
+          <div class="trust-title">
+            <h4>隐私保护</h4>
+            <span class="status-pill" id="status-privacy">运行正常</span>
+          </div>
+          <p class="trust-desc" id="desc-privacy">可验证加密通道持续守护</p>
+          <div class="trust-meter">
+            <span id="meter-privacy"></span>
+          </div>
+          <div class="trust-meta">
+            <span id="latency-privacy">延迟 21ms</span>
+            <span id="load-privacy">负载 64%</span>
+          </div>
+        </div>
+        <div class="trust-card" data-module="supervision">
+          <div class="trust-title">
+            <h4>信息监管</h4>
+            <span class="status-pill" id="status-supervision">运行正常</span>
+          </div>
+          <p class="trust-desc" id="desc-supervision">合规策略与审计轨迹齐备</p>
+          <div class="trust-meter">
+            <span id="meter-supervision"></span>
+          </div>
+          <div class="trust-meta">
+            <span id="latency-supervision">延迟 27ms</span>
+            <span id="load-supervision">负载 53%</span>
+          </div>
         </div>
       </div>
     </section>
